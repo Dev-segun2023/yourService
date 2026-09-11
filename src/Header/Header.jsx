@@ -1,4 +1,4 @@
-import React from 'react'
+import { Link } from 'react-router-dom'
 
 import './Header.css'
 
@@ -6,7 +6,7 @@ const Header = () => {
   return (
     <div className='Header'>
     <nav className='nav'>
-        <h3>your<span style={{color:'blue', fontSize:'22px'}}>Service</span></h3>
+        <Link to="/" className='logo'><h3>your<span style={{color:'blue', fontSize:'22px'}}>Service</span></h3></Link>
 
       <ul>
         {/* <li>Home</li> */}
@@ -18,8 +18,8 @@ const Header = () => {
       </ul>
     </nav>
     <div className="access-account">
-      <button className='log-in'>Log In</button>
-      <button className='sign-up'>Sign Up</button>
+      <Link to="/login"><button className='log-in'>Log In</button></Link>
+      <Link to="/signup"><button className='sign-up'>Sign Up</button></Link>
     </div>
 
     </div>
