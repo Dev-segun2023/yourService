@@ -7,9 +7,11 @@ div{
 }
 
 .hero{
-  margin-top: 59px;
+  background-color: rgb(248, 248, 248);
+  margin-top: 70px;
   display: flex;
   flex-direction: row;
+  gap: 20px;
   width: 100%;
   margin-left: auto;
   margin-right: auto;
@@ -19,23 +21,75 @@ div{
 
 .hero-left{
   margin-top: 0;
-  background-color: rgb(218, 239, 239);
-  width: 50vw;
+background:rgb(223, 76, 76, 0.1);
+  backdrop-filter: blur(5px);
+  width: 40vw;
   display: flex;
  flex-direction: column;
- padding-left: 5px;
-}
-.hero-left h3{
-  padding-top: 10px
+ padding-left: 20px;
+ padding-right:20px;
+ padding-top: 20px;
 }
 
+.bridging{
+  font: size 14px;
+  align-self: flex-start;
+  box-sizing: border-box;
+  background-color: rgb(192, 241, 94);
+  margin-bottom: 20px;
+  padding: 10px;
+  border-radius: 10px;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+}
+
+.your-service{
+  font-size: 16px;
+  font-style: italic;
+  font-weight: 400;
+  font-family: 'Poppins', sans-serif;
+  margin-top: 20px;
+  margin-bottom: 50px;
+ word-spacing: 5px;
+ letter-spacing: 5px;
+}
+.users-album{
+  margin-bottom: 10px;
+  display: flex;align-items: center;
+}
+.passport{
+  width: 35px;
+  border-radius: 50px;
+  object-fit: contain;
+}
+.users-count{
+  display: inline;
+  font-size: 16px;
+  font-weight: 600;
+}
+button{
+  padding: 10px 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  border: none;
+  margin-right: 20px;
+  background-color: grey;
+  cursor: pointer;
+  transition: transform 0.1s ease-in-out;
+}
+
+button:hover{
+  transform: scale(1.01);
+  background-color: green;
+  color: white;
+}
 .hero-right{
   margin-top: 0;
 }
 
 .hero-left{
   margin-top: 0;
-background-color: aqua;
+/* background-color: aqua; */
 width: 50%;
 }
 .hero-right{
@@ -45,6 +99,7 @@ width: 50%;
 .hero-image{
   width: 100%;
   height: 500px;
+  border-radius: 100%;
   object-fit: cover;
 }
 
