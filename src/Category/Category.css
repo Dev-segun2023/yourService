@@ -1,0 +1,80 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+.popular{
+  text-align: center;
+  font-size: 30px;
+  margin-top: 20px;
+}
+.category-container{
+  display: flex;
+  justify-content: center;
+  background-color: #f4efef;
+  gap: 50px;
+  margin-top: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.category{
+  backdrop-filter: blur(20px); /* Add a blur effect */
+  width: 200px;
+  height: 150px;
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #333;
+  /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.category-icon{
+  font-size: 40px;
+  color: skyblue;
+  margin-bottom: 10px;
+}
+.category:hover {
+  /* transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); */
+
+   transform: translateY(-5px);
+  box-shadow: 10px 5px 20px rgb(174, 209, 77);
+} 
+
+.counts{
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 30px;
+  margin-bottom: 70px;
+  background-color: #f0f0f0;
+    padding-top: 10px;
+  padding-bottom: 10px;
+  
+}
+.count-group{
+  display: flex;
+  width: 300px;
+  height: 100px;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+  /* border: 1px solid grey; */
+  padding-right: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s;
+}
+.count-group:hover{
+  transform: translateY(-5px);
+  box-shadow: 10px 5px 20px rgb(174, 209, 77);
+}
+.count-icon{
+  width:70px;
+  height: 70px;
+  color: skyblue;
+}

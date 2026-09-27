@@ -1,10 +1,12 @@
-import { useState, useEffect, Fragment } from 'react'
+import { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
 import feeds from '../data/feed'
 import passport1 from '../assets/passports/passport1.jpg'
 import passport2 from '../assets/passports/passport2.jpg'
 import passport3 from '../assets/passports/passport3.jpg'
 import passport4 from '../assets/passports/passport4.jpg'
 import passport5 from '../assets/passports/passport5.jpg'
+import Category from '../Category/Category'
 import './Hero.css'
 
 const Hero = () => {
@@ -23,6 +25,7 @@ const Hero = () => {
   }, [])
 
   return (
+    <div className="">
     <div className='hero'>
       <div className="hero-left">
           <h3 className='bridging'>Bridging the gap, building trust.</h3>
@@ -39,7 +42,7 @@ const Hero = () => {
             <img src={passport5} alt="" className='passport' />
             <p className='users-count'>120k+ Users</p>
             </div>
-            <button>I Need a Service</button>
+            <button> <Link to="/search" className='service-link'>I Need a Service</Link></button>
             <button>I Offer Services</button>
   
       </div>
@@ -48,8 +51,9 @@ const Hero = () => {
           <img src={feeds[currentFeed].image} alt=""  className="hero-image"/>
           <h1 className='hero-title'>{feeds[currentFeed].title}</h1>
       </div>
-
-    </div>
+</div>
+    {<Category/>}
+</div>
   )
 }
 

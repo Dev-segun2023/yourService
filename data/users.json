@@ -1,0 +1,54 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "firstName": "Segun",
+      "lastName": "John",
+      "emailAddress": "segun@gmail.com",
+      "password": "Segun",
+      "confirmPassword": "Segun",
+      "accountType": "service-needer",
+      "checkBox": true
+    },
+    {
+      "id": 2,
+      "firstName": "ki",
+      "lastName": "lo",
+      "emailAddress": "ki@gmail.com",
+      "password": "44",
+      "confirmPassword": "44",
+      "accountType": "service-needer",
+      "checkBox": true
+    },
+    {
+      "id": 3,
+      "firstName": "Segun",
+      "lastName": "John",
+      "emailAddress": "segundavidjohn@gmail.com",
+      "password": "mm",
+      "confirmPassword": "mm",
+      "accountType": "service-needer",
+      "checkBox": true
+    }
+  ],
+
+   "profiles":[
+    {    
+      "id": 1,
+      "image":"/segun.jpeg",
+      "userId": 1,
+      "bio": "Professional Developer with 3 years of experience.",
+      "category": "MERN stack developer",
+      "services": [
+        "front-end development",
+        "back-end development",
+        "full-stack development",
+        "database management"
+      ],
+      "location": "Lagos",
+      "LGA": "Ikeja",
+      "experience": "3 years",
+      "portfolio": []
+    }
+  ]
+}
