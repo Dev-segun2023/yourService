@@ -11,13 +11,17 @@ const Login = () => {
   const navigate = useNavigate()
   const [emailAddress, setEmailAddress] = useState('')
   const [password, setPassword] = useState('')
+  const [loginError, setLoginError] = useState(null)
    const {isAuthenticated, setIsAuthenticated,setCurrentUser} = useContext(AuthContext)
 
 
     const handleSubmit = (e) => {
     e.preventDefault()
     const user = data.find(user => user.emailAddress === emailAddress && user.password === password)
-    
+    if(!user){
+      setLoginError('invalid account login details')
+      return;
+    }
    if(user){
     setIsAuthenticated(true)
     setCurrentUser(user)
@@ -26,8 +30,9 @@ const Login = () => {
 
 
     console.log({
-      emailAddress,
-      password
+      user
+      // emailAddress,
+      // password
     })
   }
 
@@ -81,7 +86,7 @@ const Login = () => {
               required
             />
           </div>
-
+              <p style={{color:'red'}}>{loginError}</p>
           <button type="submit" className="login-button">
             Log In
           </button>

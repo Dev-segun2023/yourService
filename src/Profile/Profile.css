@@ -3,5 +3,30 @@
   padding: 0;
 }
 .user-profile{
-  margin-top: 70px;
+  margin-top: 80px;
+  display: flex;
+  gap:10px;
+  
 }
+
+.user-profile .profile-photo{
+  width: 30vw;
+}
+.profile-photo img{
+  width: 100%;
+  padding: 0;
+}
+.details{
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.details h3{
+  font-size: 22px;
+  color: deeppink;
+}
+.about{
+  max-width: 500px;
+}
+
+ 

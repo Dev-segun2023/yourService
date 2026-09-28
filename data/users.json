@@ -37,8 +37,10 @@
       "id": 1,
       "image":"/segun.jpeg",
       "userId": 1,
-      "bio": "Professional Developer with 3 years of experience.",
+      "bio": "Professional Developer with 3 years of experience.\nI am a MERN stack developer with a passion for creating innovative solutions using the latest technologies. I have a strong background in front-end and back-end development, and I am skilled in database management. I am always looking for new opportunities to collaborate with other professionals and bring my skills to the table. ",
+
       "category": "MERN stack developer",
+      "profession":"MERN stack developer",
       "services": [
         "front-end development",
         "back-end development",

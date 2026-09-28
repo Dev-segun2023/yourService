@@ -67,6 +67,7 @@ li:hover{
 }
 .log-out{
    background-color:tomato;
+   color: whitesmoke;
   padding: 8px 15px;
   border-radius:10px;
   margin-right: 3px;

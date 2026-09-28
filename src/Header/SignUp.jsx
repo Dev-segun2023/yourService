@@ -98,7 +98,7 @@ const SignUp = () => {
                   ? 'account-option active'
                   : 'account-option'
               }
-              name='accountType'
+              // name='accountType'
               onClick={() => setAccountType('service-needer')}
             >
               <strong>Find a Service</strong>
@@ -113,6 +113,7 @@ const SignUp = () => {
                   ? 'account-option active'
                   : 'account-option'
               }
+              // name='accountType'
               onClick={() => setAccountType('service-provider')}
             >
               <strong>Offer a Service</strong>
