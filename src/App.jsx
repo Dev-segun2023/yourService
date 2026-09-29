@@ -17,6 +17,7 @@ function App() {
       <DataProvider >
       <div className='App'>
         <Header />
+        <main >
         <Routes>
           <Route path="/" element={<Hero />} />
           <Route path="/profile" element={<Profile />} />
@@ -24,6 +25,7 @@ function App() {
           <Route path="/signup" element={<SignUp />}/>
           <Route path="/search" element={<Search />}/>
         </Routes>
+        </main>
           <Footer/>
       </div>
       </DataProvider>

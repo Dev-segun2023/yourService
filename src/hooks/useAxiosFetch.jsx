@@ -33,7 +33,7 @@ const useAxiosFetch = (dataUrl) => {
       }
       finally{
         // isMounted  && 
-       setTimeout(()=>{setIsLoading(false)},2000)
+       setTimeout(()=>{setIsLoading(false)},3000)
       }
     }
     fetchData()

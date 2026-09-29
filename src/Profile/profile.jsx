@@ -1,5 +1,6 @@
 import React from 'react'
 import {useState,useEffect, useContext} from 'react'
+import {Link} from 'react-router-dom'
 import useAxiosFetch from '../hooks/useAxiosFetch'
 import AuthContext from '../../Context/AuthContext'
 
@@ -8,13 +9,30 @@ import './Profile.css'
 const Profile = () => {
   const {isAuthenticated,currentUser} = useContext(AuthContext)
 // const {data:users} = useAxiosFetch('http://localhost:3500/users')
-const {data:profiles} = useAxiosFetch('http://localhost:3500/profiles')
+const {data:profiles, isLoading} = useAxiosFetch('http://localhost:3500/profiles')
 
+if (isLoading){
+  return <p style={{marginTop: "250px", textAlign:"center"}}>loading ...</p>
+}
 if(!currentUser){
-  return <p>loading user...</p>
+  return (
+    <p style={{marginTop: "250px", textAlign:"center"}}>
+         <Link to='/login' className='force-login'>Oga Login first...</Link>
+    </p>
+    )
 }
 
 const userProfile = profiles.find((profile) => profile.userId === currentUser.id)
+console.log(userProfile)
+
+if (userProfile == undefined){
+  return (
+    <p style={{marginTop: "250px", textAlign:"center"}}>
+        <Link to="/createprofile" className='force-create-profile'>Oga you need to create a profile first, Click to create...</Link>
+        </p>
+)
+}
+
 
 console.log(userProfile)
 

@@ -29,4 +29,16 @@
   max-width: 500px;
 }
 
+.force-create-profile, .force-login{
+  /* margin-top: 250px; */
+  text-decoration: none;
+  color: white;
+  background-color: orangered;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 18px;
+  align-self: center;
+
+}
+
  
