@@ -7,6 +7,7 @@ import Profile from './Profile/profile';
 import LogIn from './Header/LogIn';
 import SignUp from './Header/SignUp';
 import Footer from './Footer/Footer';
+import CreateProfile from './create_profile/CreateProfile';
 import {DataProvider} from '../Context/AuthContext'
 
 import './App.css'
@@ -24,6 +25,7 @@ function App() {
           <Route path="/login" element={<LogIn />} />
           <Route path="/signup" element={<SignUp />}/>
           <Route path="/search" element={<Search />}/>
+          <Route path="/createprofile" element={<CreateProfile />}/>
         </Routes>
         </main>
           <Footer/>

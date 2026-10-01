@@ -47,8 +47,9 @@
         "full-stack development",
         "database management"
       ],
-      "location": "Lagos",
-      "LGA": "Ikeja",
+      "state": "Lagos",
+      "lga": "Ikeja",
+      "city": "Ikeja",
       "experience": "3 years",
       "portfolio": []
     }
