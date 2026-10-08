@@ -1,9 +1,18 @@
-import {useState} from 'react'
+import {useState, useContext} from 'react'
+import AuthContext from '../../Context/AuthContext'
 import './Search.css'
 
 const Search = () => {
   const [category, setCategory] = useState('');
   const [location, setLocation] = useState('');
+
+  const {currentUser,isAuthenticated} = useContext(AuthContext)
+
+  if(!currentUser && !isAuthenticated){
+    return (
+      <p style={{marginTop: "250px", textAlign:"center"}}>Please Login to access this page</p>
+    )
+  }
   return (
     <form className='search-form'>
       <div className='form-group'>

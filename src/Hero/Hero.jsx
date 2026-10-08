@@ -42,7 +42,8 @@ const Hero = () => {
             <img src={passport5} alt="" className='passport' />
             <p className='users-count'>120k+ Users</p>
             </div>
-            <button> <Link to="/search" className='service-link'>I Need a Service</Link></button>
+            {/* <button> <Link to="/search" className='service-link'>I Need a Service</Link></button> */}
+            <button> <Link to="/createjob" className='service-link'>Create Job</Link></button>
             <button>I Offer Services</button>
   
       </div>

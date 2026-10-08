@@ -1,5 +1,6 @@
 import { useState,useEffect } from "react";
 import axios from 'axios'
+import api from "../Api/baseUrl";
 
 import React from 'react'
 
@@ -16,7 +17,7 @@ const useAxiosFetch = (dataUrl) => {
     const fetchData = async()=>{
       setIsLoading(true)
       try {
-        const response = await axios.get(dataUrl, {
+        const response = await api.get(dataUrl, {
           // cancelToken: source.token
           signal: controller.signal
         })

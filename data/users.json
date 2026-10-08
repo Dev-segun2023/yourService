@@ -31,16 +31,14 @@
       "checkBox": true
     }
   ],
-
-   "profiles":[
-    {    
+  "profiles": [
+    {
       "id": 1,
-      "image":"/segun.jpeg",
+      "image": "/segun.jpeg",
       "userId": 1,
       "bio": "Professional Developer with 3 years of experience.\nI am a MERN stack developer with a passion for creating innovative solutions using the latest technologies. I have a strong background in front-end and back-end development, and I am skilled in database management. I am always looking for new opportunities to collaborate with other professionals and bring my skills to the table. ",
-
       "category": "MERN stack developer",
-      "profession":"MERN stack developer",
+      "profession": "MERN stack developer",
       "services": [
         "front-end development",
         "back-end development",
@@ -52,6 +50,63 @@
       "city": "Ikeja",
       "experience": "3 years",
       "portfolio": []
+    },
+    {
+      "id": 2,
+      "image": null,
+      "userId": 3,
+      "bio": "i code app development",
+      "category": "IT",
+      "profession": "dev",
+      "state": "Anambra",
+      "lga": "Ihiala",
+      "city": "Ihuoweri",
+      "experience": "2",
+      "services": [
+        "apps and services"
+      ],
+      "portfolio": []
+    },
+    {
+      "id": 3,
+      "image": null,
+      "userId": 2,
+      "bio": "i clean very well",
+      "category": "cleaning",
+      "profession": "cleaner",
+      "state": "Imo",
+      "lga": "Oguta",
+      "city": "Eziama",
+      "experience": "2",
+      "services": [
+        "homes",
+        "offices",
+        "churches"
+      ],
+      "portfolio": []
+    }
+  ],
+  "jobs": [
+    {
+      "id": 1,
+      "title": "Need a MERN stack developer",
+      "description": "I am looking for a skilled MERN stack developer to help me build a web application. The ideal candidate should have experience with React, Node.js, Express, and MongoDB. The project will involve building a responsive front-end, developing RESTful APIs, and integrating with a database. If you are interested in this project, please reach out to me with your portfolio and relevant experience.",
+      "category": "MERN stack development",
+      "status": "pending",
+      "state": "Lagos",
+      "lga": "Ikeja",
+      "city": "Ikeja",
+      "userId": 1
+    },
+    {
+      "id": 3,
+      "jobTitle": "CPU break down",
+      "jobDescription": "my CPU stopped working this morning, the fan is not whirling",
+      "jobCategory": "IT",
+      "jobState": "Ondo",
+      "jobLga": "Irele",
+      "jobCity": "Ajijoh",
+      "userId": 3
     }
   ]
 }

@@ -1,14 +1,18 @@
 import { useState,useEffect } from 'react'
-import { Link } from 'react-router-dom'
+import { Link,useNavigate } from 'react-router-dom'
+import useAxiosFetch from '../hooks/useAxiosFetch'
 import api from '../Api/baseUrl'
 import './SignUp.css'
 
 
 const SignUp = () => {
-
   const [accountType, setAccountType] = useState('service-needer')
   const [checkBox, setCheckBox ] = useState(false)
   const [error, setError] = useState('')
+
+  const {data:users} = useAxiosFetch('/users')
+
+  
  
 
   const [formData, setFormData] = useState({
@@ -18,6 +22,8 @@ const SignUp = () => {
     password: '',
     confirmPassword: ''
   })
+  
+  const navigate = useNavigate()
   const handleChange = (e) => {
     const { name, value } = e.target
 
@@ -30,6 +36,12 @@ const SignUp = () => {
     e.preventDefault()
     if(formData.password !== formData.confirmPassword){
       setError('Passwords do not match')
+      return;
+    }
+
+    const existingUser = users.find(user => user.emailAddress === formData.emailAddress)
+    if(existingUser){
+      setError('Email address already exists')
       return;
     }
     try {
@@ -46,6 +58,7 @@ const SignUp = () => {
       }
       const response = await api.post('/users', collectedInputs)
       console.log(response.data)
+      navigate('/login')
     } catch (error) {
       console.log(error.message)
     }
@@ -245,6 +258,8 @@ const SignUp = () => {
             </span>
 
           </label>
+
+          
 
 
           <button
