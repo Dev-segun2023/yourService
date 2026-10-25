@@ -1,0 +1,167 @@
+
+import { useContext } from 'react'
+import { Link } from 'react-router-dom'
+import AuthContext from '../../Context/AuthContext'
+import useAxiosFetch from '../hooks/useAxiosFetch'
+import './Dashboard.css'
+
+const Dashboard = () => {
+  const { currentUser } = useContext(AuthContext)
+
+  const { data: jobs, isLoading } = useAxiosFetch('/jobs')
+  const { data: bids } = useAxiosFetch('/bids')
+
+  const allJobs = Array.isArray(jobs) ? jobs : []
+  const allBids = Array.isArray(bids) ? bids : []
+
+  if (!currentUser) {
+    return <p>Please log in to view your dashboard.</p>
+  }
+
+  const userId = currentUser.id
+  const accountType = currentUser.accountType
+
+  const isProvider = accountType === 'service-provider'
+
+  const myJobs = allJobs.filter(
+    job => String(job.userId) === String(userId)
+  )
+
+  const assignedJobs = allJobs.filter(
+    job => String(job.assignedTo) === String(userId)
+  )
+
+  const relevantJobs = isProvider ? assignedJobs : myJobs
+
+  const completedJobs = relevantJobs.filter(
+    job => job.jobStatus === 'completed'
+  )
+
+  const activeJobs = relevantJobs.filter(
+    job =>
+      job.jobStatus === 'in-progress' ||
+      job.jobStatus === 'pending'
+  )
+
+  const pendingBids = allBids.filter(
+    bid =>
+      String(bid.userId) === String(userId) &&
+      bid.bidStatus === 'pending'
+  )
+
+  const stats = [
+    {
+      label: isProvider ? 'Jobs Assigned' : 'Jobs Created',
+      value: isProvider ? assignedJobs.length : myJobs.length,
+      icon: '📋',
+    },
+    {
+      label: 'Jobs Completed',
+      value: completedJobs.length,
+      icon: '✓',
+    },
+    {
+      label: 'Active Jobs',
+      value: activeJobs.length,
+      icon: '⚡',
+    },
+    {
+      label: 'Pending Bids',
+      value: pendingBids.length,
+      icon: '💬',
+    },
+  ]
+
+  const recentJobs = [...relevantJobs].reverse().slice(0, 5)
+
+  return (
+    <main className="dashboard">
+      <header className="dashboard-header">
+        <div>
+          <h1>Dashboard</h1>
+          <p>
+            Welcome back, {currentUser.firstName || 'there'}!
+          </p>
+        </div>
+
+        <Link to="/profile" className="profile-link">
+          My Profile
+        </Link>
+      </header>
+
+      <section className="dashboard-stats">
+        {stats.map(stat => (
+          <article className="stat-card" key={stat.label}>
+            <span className="stat-icon">{stat.icon}</span>
+            <p>{stat.label}</p>
+            <h2>{stat.value}</h2>
+          </article>
+        ))}
+      </section>
+
+      <section className="dashboard-content">
+        <div className="recent-jobs">
+          <div className="section-heading">
+            <h2>Recent Jobs</h2>
+            <Link to="/jobs">View all</Link>
+          </div>
+
+          {isLoading ? (
+            <p>Loading jobs...</p>
+          ) : recentJobs.length === 0 ? (
+            <p className="empty-state">
+              No jobs to display yet.
+            </p>
+          ) : (
+            recentJobs.map(job => (
+              <article className="job-row" key={job.id}>
+                <div>
+                  <h3>{job.jobTitle}</h3>
+                  <p>
+                    {job.jobCity}, {job.jobState}
+                  </p>
+                </div>
+
+                <span
+                  className={`job-status ${
+                    job.jobStatus || 'open'
+                  }`}
+                >
+                  {job.jobStatus || 'open'}
+                </span>
+
+                <Link to={`/jobs/${job.id}`}>
+                  View
+                </Link>
+              </article>
+            ))
+          )}
+        </div>
+
+        <aside className="quick-actions">
+          <h2>Quick Actions</h2>
+
+          {!isProvider && (
+            <Link to="/createjob" className="action-button">
+              + Post a Job
+            </Link>
+          )}
+
+          <Link to="/search" className="action-button secondary">
+            Find Services
+          </Link>
+
+          <Link to="/bids" className="action-button secondary">
+            View Bids
+          </Link>
+
+          <Link to="/profile" className="action-button secondary">
+            Manage Profile
+          </Link>
+        </aside>
+      </section>
+    </main>
+  )
+}
+
+export default Dashboard

@@ -9,6 +9,9 @@ import SignUp from './Header/SignUp';
 import Footer from './Footer/Footer';
 import CreateProfile from './create_profile/CreateProfile';
 import JobCreation from './job_creation/JobCreation';
+import JobList from './Jobs/JobList';
+import JobDetail from './Jobs/JobDetail';
+import Bid from './Bid/Bid'
 import {DataProvider} from '../Context/AuthContext'
 
 import './App.css'
@@ -28,6 +31,10 @@ function App() {
           <Route path="/search" element={<Search />}/>
           <Route path="/createjob" element={<JobCreation />}/>
           <Route path="/createprofile" element={<CreateProfile />}/>
+          <Route path="/jobs" element={<JobList/>}/>
+          <Route path="/jobs/:id" element={<JobDetail/>} />
+          <Route path="/bid" element={<Bid/>} />  
+          <Route path="/bid/:id" element ={<Bid/>} />
         </Routes>
         </main>
           <Footer/>

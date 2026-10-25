@@ -1,0 +1,171 @@
+.job-detail-page{
+  margin-top: 80px;
+}
+
+/* Job Detail Page */
+.job-detail-page {
+  min-height: 100vh;
+  padding: 120px 20px 60px;
+  background: #f5f7fb;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: Arial, sans-serif;
+  color: #1f2937;
+}
+
+/* Page Heading */
+.job-detail-page > h3 {
+  width: 100%;
+  max-width: 850px;
+  margin: 0 0 25px;
+  font-size: 28px;
+  font-weight: 700;
+  color: #111827;
+}
+
+/* Job Details Card */
+.job-details {
+  width: 100%;
+  max-width: 850px;
+  box-sizing: border-box;
+  padding: 35px;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  box-shadow: 0 8px 30px rgba(15, 23, 42, 0.06);
+}
+
+/* Individual Detail Sections */
+.job-details > div {
+  padding: 20px 0;
+  border-bottom: 1px solid #edf0f5;
+}
+
+.job-details > div:first-child {
+  padding-top: 0;
+}
+
+.job-details > div h3 {
+  margin: 0 0 10px;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  color: #6b7280;
+}
+
+.job-details > div p {
+  margin: 0;
+  font-size: 17px;
+  line-height: 1.7;
+  color: #1f2937;
+  overflow-wrap: anywhere;
+}
+
+/* Job Title */
+.job-details > div:first-child p {
+  font-size: 25px;
+  font-weight: 700;
+  color: #111827;
+}
+
+/* Job Status */
+.job-details > div:nth-child(5) p {
+  display: inline-block;
+  padding: 6px 13px;
+  border-radius: 20px;
+  background: #fff7ed;
+  color: #c2410c;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+/* Bid Button */
+.job-details > button {
+  margin-top: 28px;
+  padding: 0;
+  border: none;
+  border-radius: 8px;
+  background: #2563eb;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.job-details > button a {
+  display: block;
+  padding: 14px 32px;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.job-details > button:hover {
+  background: #1d4ed8;
+  transform: translateY(-2px);
+}
+
+/* Back to Jobs Link */
+.job-details > a {
+  display: inline-block;
+  margin: 28px 0 0 20px;
+  color: #2563eb;
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.job-details > a:hover {
+  color: #1d4ed8;
+  text-decoration: underline;
+}
+
+/* Loading / Unavailable Message */
+.job-detail-page > h3:not(:first-child) {
+  color: #374151;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .job-detail-page {
+    padding: 100px 15px 40px;
+  }
+
+  .job-detail-page > h3 {
+    font-size: 24px;
+  }
+
+  .job-details {
+    padding: 24px 20px;
+    border-radius: 12px;
+  }
+
+  .job-details > div {
+    padding: 17px 0;
+  }
+
+  .job-details > div:first-child p {
+    font-size: 22px;
+  }
+
+  .job-details > div p {
+    font-size: 15px;
+  }
+
+  .job-details > button {
+    width: 100%;
+  }
+
+  .job-details > button a {
+    text-align: center;
+  }
+
+  .job-details > a {
+    display: block;
+    margin: 22px 0 0;
+    text-align: center;
+  }
+}

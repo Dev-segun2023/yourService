@@ -9,6 +9,7 @@ import './JobCreation.css';
 const JobCreation = () => {
   const [error, setError] = useState('')
   const [success, setSuccess] = useState('')
+  
   const [jobData, setJobData] = useState({
     jobTitle:'',
     jobDescription:'',
@@ -44,7 +45,9 @@ const JobCreation = () => {
   const collectedInputs = {
     id,
     ...jobData,
-    userId
+    userId,
+    jobStatus,
+    assignedTo: null
   }
 
     try {
@@ -58,6 +61,7 @@ const JobCreation = () => {
         jobState:'',
         jobLga:'',
         jobCity:''
+        
       })
       navigate('/dashboard')
     } catch (error) {

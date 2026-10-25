@@ -1,0 +1,263 @@
+.bid-page{
+  margin-top: 100px;
+}
+
+
+/* Bid.css */
+
+.bid-page {
+  width: min(1200px, 92%);
+  margin: 110px auto 50px;
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  align-items: start;
+  gap: 28px;
+  color: #243247;
+  font-family: Arial, sans-serif;
+}
+
+/* Main page heading */
+.bid-page > h3 {
+  grid-column: 1 / -1;
+  margin: 0 0 -10px;
+  color: #173b70;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+/* Job details card */
+.job-details {
+  background: #fff;
+  border: 1px solid #e1e9f2;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 4px 18px rgba(31, 65, 114, 0.06);
+  min-width: 0;
+}
+
+.job-details > div {
+  padding: 18px 0;
+  border-bottom: 1px solid #edf1f6;
+}
+
+.job-details > div:first-child {
+  padding-top: 0;
+}
+
+.job-details > div:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.job-details h3 {
+  color: #527095;
+  font-size: 14px;
+  font-weight: 600;
+  margin: 0 0 8px;
+}
+
+.job-details p {
+  color: #26364d;
+  font-size: 15px;
+  line-height: 1.7;
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+
+.job-details > div:first-child p {
+  color: #173b70;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+/* Bid form card */
+.bid-page form {
+  min-width: 0;
+  background: #fff;
+  border: 1px solid #e1e9f2;
+  border-radius: 12px;
+  padding: 28px;
+  box-shadow: 0 4px 18px rgba(31, 65, 114, 0.06);
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+/* Form fields */
+.bid-page form > div {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  min-width: 0;
+}
+
+.bid-page form label {
+  color: #263b59;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.bid-page textarea,
+.bid-page input[type="text"] {
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #ccd8e7;
+  border-radius: 7px;
+  padding: 13px 14px;
+  font-family: inherit;
+  font-size: 14px;
+  color: #26364d;
+  background: #fff;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.bid-page textarea {
+  min-height: 140px;
+  resize: vertical;
+  line-height: 1.6;
+}
+
+.bid-page textarea:focus,
+.bid-page input[type="text"]:focus {
+  outline: none;
+  border-color: #3478e5;
+  box-shadow: 0 0 0 3px rgba(52, 120, 229, 0.12);
+}
+
+.bid-page input::placeholder,
+.bid-page textarea::placeholder {
+  color: #8a98aa;
+}
+
+/* File upload */
+.bid-page input[type="file"] {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px;
+  border: 1px solid #ccd8e7;
+  border-radius: 7px;
+  background: #f9fbfe;
+  color: #52657d;
+  font-size: 13px;
+}
+
+/* Share contact checkbox */
+.bid-page form .share-contact {
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.share-contact label {
+  cursor: pointer;
+}
+
+.bid-page input[type="checkbox"] {
+  width: 17px;
+  height: 17px;
+  accent-color: #2874e8;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+/* Submit button */
+.bid-page form button {
+  width: 100%;
+  border: none;
+  border-radius: 7px;
+  padding: 14px 20px;
+  background: #2874e8;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.bid-page form button:hover {
+  background: #195dc5;
+}
+
+.bid-page form button:active {
+  transform: scale(0.99);
+}
+
+/* Information notice */
+.bid-page .notice {
+  grid-column: 2;
+  margin: -10px 0 0;
+  padding: 16px;
+  border: 1px solid #d8e8ff;
+  border-radius: 8px;
+  background: #f0f6ff;
+  color: #42618b;
+  font-size: 13px;
+  line-height: 1.7;
+}
+.bid-page .error{
+  grid-column: 2;
+  margin: -10px 0 0;
+  padding: 16px;
+  border: 1px solid #d8e8ff;
+  border-radius: 8px;
+  background: #f0f6ff;
+  color:red;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+/* Tablet and mobile */
+@media (max-width: 850px) {
+  .bid-page {
+    grid-template-columns: 1fr;
+    width: min(650px, 92%);
+    margin-top: 100px;
+    gap: 20px;
+  }
+
+  .bid-page > h3 {
+    grid-column: 1;
+  }
+
+  .bid-page .notice {
+    grid-column: 1;
+    margin-top: -8px;
+  }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+  .bid-page {
+    width: 94%;
+    margin-top: 90px;
+    margin-bottom: 30px;
+    gap: 16px;
+  }
+
+  .bid-page > h3 {
+    font-size: 23px;
+  }
+
+  .job-details,
+  .bid-page form {
+    padding: 18px;
+    border-radius: 9px;
+  }
+
+  .job-details > div {
+    padding: 15px 0;
+  }
+
+  .job-details > div:first-child p {
+    font-size: 18px;
+  }
+
+  .bid-page textarea {
+    min-height: 120px;
+  }
+
+  .bid-page form {
+    gap: 19px;
+  }
+}

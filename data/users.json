@@ -27,7 +27,27 @@
       "emailAddress": "segundavidjohn@gmail.com",
       "password": "mm",
       "confirmPassword": "mm",
-      "accountType": "service-needer",
+      "accountType": "service-provider",
+      "checkBox": true
+    },
+    {
+      "id": 4,
+      "firstName": "Tunde",
+      "lastName": "Ganiyu",
+      "emailAddress": "Tunde@gmail.com",
+      "password": "tt",
+      "confirmPassword": "tt",
+      "accountType": "service-provider",
+      "checkBox": true
+    },
+    {
+      "id": 5,
+      "firstName": "Solomon",
+      "lastName": "Ebuka",
+      "emailAddress": "solomon@gmail.com",
+      "password": "ss",
+      "confirmPassword": "ss",
+      "accountType": "service-provider",
       "checkBox": true
     }
   ],
@@ -84,29 +104,104 @@
         "churches"
       ],
       "portfolio": []
+    },
+    {
+      "id": 4,
+      "image": null,
+      "userId": 4,
+      "bio": "i clean very well",
+      "category": "cleaning",
+      "profession": "cleaner",
+      "state": "Jos",
+      "lga": "Akunmal",
+      "city": "Eziama",
+      "experience": "2",
+      "services": [
+        "homes",
+        "offices",
+        "churches"
+      ],
+      "portfolio": []
+    },
+    {
+      "id": 5,
+      "image": null,
+      "userId": 5,
+      "bio": "I render electrical services",
+      "category": "Electical",
+      "profession": "Electrician",
+      "state": "Imo",
+      "lga": "Oguta",
+      "city": "Eziama",
+      "experience": "4",
+      "services": [
+        "homes",
+        "offices",
+        "churches"
+      ],
+      "portfolio": []
     }
   ],
   "jobs": [
     {
       "id": 1,
-      "title": "Need a MERN stack developer",
-      "description": "I am looking for a skilled MERN stack developer to help me build a web application. The ideal candidate should have experience with React, Node.js, Express, and MongoDB. The project will involve building a responsive front-end, developing RESTful APIs, and integrating with a database. If you are interested in this project, please reach out to me with your portfolio and relevant experience.",
-      "category": "MERN stack development",
-      "status": "pending",
-      "state": "Lagos",
-      "lga": "Ikeja",
-      "city": "Ikeja",
-      "userId": 1
+      "jobTitle": "Need a MERN stack developer",
+      "jobDescription": "I am looking for a skilled MERN stack developer to help me build a web application. The ideal candidate should have experience with React, Node.js, Express, and MongoDB. The project will involve building a responsive front-end, developing RESTful APIs, and integrating with a database. If you are interested in this project, please reach out to me with your portfolio and relevant experience.",
+      "jobCategory": "IT",
+      "jobStatus": "open",
+      "jobState": "Lagos",
+      "jobLga": "Ikeja",
+      "jobCity": "Ikeja",
+      "userId": 1,
+      "assignedTo": 3
     },
     {
-      "id": 3,
+      "id": 2,
       "jobTitle": "CPU break down",
-      "jobDescription": "my CPU stopped working this morning, the fan is not whirling",
+      "jobDescription": "repair it",
       "jobCategory": "IT",
-      "jobState": "Ondo",
-      "jobLga": "Irele",
-      "jobCity": "Ajijoh",
-      "userId": 3
+      "jobStatus": "open",
+      "jobState": "Anambra",
+      "jobLga": "Onitsha South",
+      "jobCity": "Main Market",
+      "userId": 1,
+      "assignedTo": null
+    }
+  ],
+  "bids": [
+    {
+      "id": 1,
+      "jobId": 1,
+      "userId": 3,
+      "persuasion": "I have built couple of MERN stack projects and I am confident I can do this one too",
+      "phoneNumber": "080123456706",
+      "shareContact": true,
+      "bidStatus": "pending",
+      "bidDate": "2026-10-13",
+      "resume": null
+    },
+    {
+      "id": 2,
+      "jobId": 1,
+      "userId": 5,
+      "persuasion": "I have solved many electrical installation problems in different homes",
+      "phoneNumber": "080123727278",
+      "shareContact": true,
+      "bidStatus": "pending",
+      "bidDate": "2026-10-13",
+      "resume": null
+    }
+  ],
+  "reviews": [
+    {
+      "id": 1,
+      "reviewerId": 1,
+      "revieweeId": 3,
+      "jobId": 1,
+      "rating": 5,
+      "comment": "Great work, very professional and delivered on time.",
+      "reviewDate": "2026-10-14",
+      "resume": null
     }
   ]
 }
